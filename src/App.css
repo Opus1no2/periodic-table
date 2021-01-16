@@ -25,9 +25,3 @@ main {
   flex: 1;
   display: flex;
 }
-
-.element {
-  padding: 2px;
-  width: 80px;
-  border: solid 1px;
-}

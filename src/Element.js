@@ -1,15 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const El = styled.div`
+  padding: 2px;
+  border: solid 1px;
+`;
 
 function Element(props) {
-  const { atomic, symbol, name, weight } = props;
+  const { number, symbol, name, atomic_mass } = props;
 
   return (
-    <div className="element col">
-      <div className="row">{atomic}</div>
+    <El className="element col">
+      <div className="row">{number}</div>
       <div className="row"><b>{symbol}</b></div>
       <div className="row">{name}</div>
-      <div className="row">{weight}</div>
-    </div>
+      <div className="row">{atomic_mass.toFixed(3)}</div>
+    </El>
   );
 }
 
