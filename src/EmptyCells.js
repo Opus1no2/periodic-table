@@ -12,10 +12,17 @@ export const TopRightCells = styled.div`
 
 export const BottomLeftColumn = styled.div`
   grid-column: 3 / span 1;
-  grid-row: 6 / span 4;
+  grid-row: 6 / span 5;
 `;
 
 export const BottomLeftSquare = styled.div`
-  grid-column: 1 / span 3;
-  grid-row: 8 / span 2;
+  grid-column: 1 / span 2;
+  grid-row: 8 / span 3;
+`;
+
+export const BottomRow = styled.div`
+  grid-row-start: 8;
+  grid-row-end: 9;
+  grid-column-start: span 15;
+  height: 25px;
 `;

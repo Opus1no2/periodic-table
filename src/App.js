@@ -1,26 +1,40 @@
-import './App.css';
+import styled from 'styled-components';
 import { data } from './data';
 import Element from './Element';
 import { Grid } from './Grid';
 import { KeySection } from './KeySection';
-import { TopRightCells, TopLeftCell, BottomLeftColumn, BottomLeftSquare } from './EmptyCells';
+import { TopRightCells, TopLeftCell, BottomLeftColumn, BottomLeftSquare, BottomRow } from './EmptyCells';
+
+
+const Main = styled.div`
+  padding: 0 25px 0 25px;
+`;
+
+const Header = styled.header`
+  padding: 0 25px 0 25px;
+  border-top: solid 10px #4b7aff;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+`;
 
 function App() {
   return (
     <>
-      <header>
+      <Header>
         <h1>Periodic Table</h1>
-      </header>
-      <main>
+      </Header>
+      <Main>
         <Grid>
           <KeySection />
           <TopRightCells />
           <TopLeftCell />
+          {data.elements.map(el => <Element {...el} />)}
           <BottomLeftColumn />
           <BottomLeftSquare />
-          {data.elements.map(el => <Element {...el} />)}
+          <BottomRow />
         </Grid>
-      </main>
+      </Main>
     </>
   );
 }

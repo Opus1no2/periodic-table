@@ -10,11 +10,11 @@ function Element(props) {
   const { number, symbol, name, atomic_mass } = props;
 
   return (
-    <El className="element col">
-      <div className="row">{number}</div>
-      <div className="row"><b>{symbol}</b></div>
-      <div className="row">{name}</div>
-      <div className="row">{atomic_mass.toFixed(3)}</div>
+    <El>
+      <div>{number}</div>
+      <div><b>{symbol}</b></div>
+      <div>{name}</div>
+      <div>{atomic_mass.toFixed(3)}</div>
     </El>
   );
 }
