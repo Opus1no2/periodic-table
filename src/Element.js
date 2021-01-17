@@ -7,10 +7,10 @@ const El = styled.div`
 `;
 
 function Element(props) {
-  const { number, symbol, name, atomic_mass } = props;
+  const { number, symbol, name, atomic_mass, onMouseEnter } = props;
 
   return (
-    <El>
+    <El onMouseEnter={ () => onMouseEnter({number, symbol, name, atomic_mass}) }>
       <div>{number}</div>
       <div><b>{symbol}</b></div>
       <div>{name}</div>
